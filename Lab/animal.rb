@@ -15,7 +15,7 @@ attr_accessor :petname , :petage , :petgender , :species , :toys
 		@petage = petage
 		@petgender = petgender
 		@species = species
-		@toys = toys #maybe this is an array?
+		@toys = []
 	end
 end
 

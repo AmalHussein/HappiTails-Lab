@@ -8,22 +8,22 @@
 
 class Person
 
-attr_accessor :clientname , :clientage , :clientpets 
+	attr_accessor :clientname , :clientage , :clientpets 
 
 	def initialize(clientname, clientage , clientpets)
 		@clientname = clientname 
 		@clientage = clientage
 		@clientpets = {}
 	end
+
+	def adding_pet(animal)
+		@clientpets[animal.name] = animal 
+		no_of_pets+= 1
+	end 
+
+	def bye_bye_pet(animal)
+		@clientpets.delete(animal.name)
+		no_of_pets-=1
+	end 
+
 end
-
-def adding_pet(animal)
-	@clientpets[animal.name] = animal 
-	no_of_pets+= 1
-end 
-
-def bye_bye_pet(animal)
-	@clientpets.delete(animal.name)
-	no_of_pets-=1
-end 
-
