@@ -10,12 +10,12 @@ class Animal
 
 attr_accessor :petname , :petage , :petgender , :species , :toys
 
-	def initialize(petname, petage, petgender, species,toys)
+	def initialize(petname, petage, petgender, species, toys=[])
 		@petname = petname
 		@petage = petage
 		@petgender = petgender
 		@species = species
-		@toys = []
+		@toys = toys
 	end
 end
 

@@ -9,7 +9,7 @@
 class Shelter
 	attr_accessor :sheltername , :address , :clients , :animals 
 
-	def initialize(sheltername ,address, clients, animals)
+	def initialize(sheltername, address)
 		@sheltername = sheltername
 		@address = address
 		@clients = {}
@@ -24,12 +24,12 @@ class Shelter
 		return @animals
 	end 
 
-	def add_animals(animals)
+	def add_animals(animal)
 		@animals[animal.name] = animal 
 	end 
 
-	def add_clients(clients)
-		@clients[clients.name] = clients 
+	def add_clients(client)
+		@clients[client.name] = client
 	end 
 end 
 
