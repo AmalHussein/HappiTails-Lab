@@ -14,16 +14,19 @@ class Person
 		@clientname = clientname 
 		@clientage = clientage
 		@clientpets = {}
+
 	end
 
 	def adding_pet(animal)
-		@clientpets[animal.name] = animal 
-		no_of_pets+= 1
+		@clientpets[animal.petname] = animal 
 	end 
 
 	def bye_bye_pet(animal)
-		@clientpets.delete(animal.name)
-		no_of_pets-=1
+		@clientpets.delete(animal.petname)
+	end
+
+	def get_number_of_pets
+		return @clientpets.length 
 	end 
 
 end
